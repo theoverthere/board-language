@@ -1,0 +1,608 @@
+Board Monopoly {
+    length = 39
+
+    tiles = 
+        Tile Go {
+            type = Start Go;
+            position = 1
+            color = white
+            text = "Go"
+        },
+        Tile Mediterranean_Ave{
+            type = Basic medave {
+                attributes = rent:"15", cost:"60"
+            };
+            position = 2
+            color = brown
+            text = "Mediterranean Avenue"
+        },
+        Tile Community_Chest{
+            type = Basic cc1 {
+                actions = 
+                    Action draw_card {
+                        description = "Draw a Community Chest Card"
+                    }
+            };
+            position = 3
+            color = white
+            text = "Community Chest"    
+        },
+        Tile Baltic_Ave{
+            type = Basic balave {
+                attributes = rent:"15", cost:"60"
+            };
+            position = 4
+            color = brown
+            text = "Baltic Avenue"
+        },
+        Tile Income_Tax{
+            type = Basic it {
+                actions = 
+                    Action pay_tax {
+                        description = "Pay $200 Income Tax"
+                    }
+            };
+            position = 5
+            color = white
+            text = "Income Tax"    
+        },
+        Tile Reading_Railroad{
+            type = Basic rr {
+                attributes = rent:"50", cost:"200"
+            };
+            position = 6
+            color = white
+            text = "Reading Railroad"    
+        },
+        Tile Oriental_Ave{
+            type = Basic orave {
+                attributes = rent:"25", cost:"100"
+            };
+            position = 7
+            color = light blue
+            text = "Oriental Avenue"
+        },
+        Tile Chance{
+            type = Basic ch1 {
+                actions = 
+                    Action draw_card {
+                        description = "Draw a Chance Card"
+                    }
+            };
+            position = 8
+            color = white
+            text = "Chance"    
+        },
+        Tile Vermont_Ave{
+            type = Basic verave {
+                attributes = rent:"25", cost:"100"
+            };
+            position = 9
+            color = light blue
+            text = "Vermont Avenue"
+        },
+        Tile Connecticut_Ave{
+            type = Basic connave {
+                attributes = rent:"30", cost:"120"
+            };
+            position = 10
+            color = light blue
+            text = "Oriental Avenue"
+        },
+        Tile Jail {
+            type = Start Jail;
+            position = 11
+            color = white
+            text = "In Jail / Just Visiting"
+        },
+        Tile St_Charles_Place{
+            type = Basic stchapl {
+                attributes = rent:"35", cost:"140"
+            };
+            position = 12
+            color = purple
+            text = "St. Charles Place"
+        },
+        Tile Electric_Company{
+            type = Basic elcom {
+                attributes = rent:"38", cost:"150"
+            };
+            position = 13
+            color = white
+            text = "Electric Company"
+        },
+        Tile States_Avenue{
+            type = Basic stave {
+                attributes = rent:"35", cost:"140"
+            };
+            position = 14
+            color = purple
+            text = "States Avenue"
+        },
+        Tile Virginia_Avenue{
+            type = Basic viave {
+                attributes = rent:"40", cost:"160"
+            };
+            position = 15
+            color = purple
+            text = "Virginia Avenue"
+        },
+        Tile Pennsylvania_Railroad{
+            type = Basic pr {
+                attributes = rent:"50", cost:"200"
+            };
+            position = 16
+            color = white
+            text = "Pennsylvania Railroad"    
+        },
+        Tile St_James_Place{
+            type = Basic stjpl {
+                attributes = rent:"45", cost:"180"
+            };
+            position = 17
+            color = orange
+            text = "St James Place"
+        },
+        Tile Community_Chest{
+            type = Basic cc2 {
+                actions = 
+                    Action draw_card {
+                        description = "Draw a Community Chest Card"
+                    }
+            };
+            position = 18
+            color = white
+            text = "Community Chest"    
+        },
+        Tile Tennessee_Ave {
+            type = Basic tenave {
+                attributes = rent:"45", cost:"180"
+            };
+            position = 19
+            color = orange
+            text = "Tennessee Avenue"
+        },
+        Tile New_York_Ave {
+            type = Basic nyave {
+                attributes = rent:"50", cost:"200"
+            };
+            position = 20
+            color = orange
+            text = "New York Avenue"
+        },
+        Tile Free_Parking{
+            type = Basic fp {
+                actions = 
+                    Action collect_free_parking {
+                        description = "Receive Free Parking Money"
+                    }
+            };
+            position = 21
+            color = white
+            text = "Free Parking"    
+        },
+        Tile Kentucky_Ave {
+            type = Basic kyave {
+                attributes = rent:"55", cost:"220"
+            };
+            position = 22
+            color = red
+            text = "Kentucky Avenue"
+        },
+        Tile Chance{
+            type = Basic ch2 {
+                actions = 
+                    Action draw_card {
+                        description = "Draw a Chance Card"
+                    }
+            };
+            position = 23
+            color = white
+            text = "Chance"    
+        },
+        Tile Indiana_Ave {
+            type = Basic kyave {
+                attributes = rent:"55", cost:"220"
+            };
+            position = 24
+            color = red
+            text = "Indiana Avenue"
+        },
+        Tile Illinois_Ave {
+            type = Basic illave {
+                attributes = rent:"60", cost:"240"
+            };
+            position = 25
+            color = red
+            text = "Illinois Avenue"
+        },
+        Tile B_and_O_Railroad {
+            type = Basic br {
+                attributes = rent:"50", cost:"200"
+            };
+            position = 26
+            color = white
+            text = "B&O Railroad"    
+        },
+        Tile Atlantic_Ave {
+            type = Basic atlave {
+                attributes = rent:"65", cost:"260"
+            };
+            position = 27
+            color = yellow
+            text = "Atlantic Avenue"
+        },
+        Tile Ventnor_Ave {
+            type = Basic venave {
+                attributes = rent:"65", cost:"260"
+            };
+            position = 28
+            color = yellow
+            text = "Ventnor Avenue"
+        },
+        Tile Water_Works {
+            type = Basic watwor {
+                attributes = rent:"38", cost:"150"
+            };
+            position = 29
+            color = white
+            text = "Water Works"
+        },
+        Tile Marvin_Gardens {
+            type = Basic margar {
+                attributes = rent:"70", cost:"280"
+            };
+            position = 30
+            color = yellow
+            text = "Marvin Gardens"
+        },
+        Tile Go_To_Jail{
+            type = Basic gtj {
+                actions = 
+                    Action go_to_jail {
+                        description = "Go To Jail. Do Not Pass Go, Do Not Collect $200"
+                    }
+            };
+            position = 31
+            color = white
+            text = "Go To Jail"    
+        },
+        Tile Pacific_Avenue {
+            type = Basic pacave {
+                attributes = rent:"75", cost:"300"
+            };
+            position = 32
+            color = green
+            text = "Pacific Avenue"
+        },
+        Tile North_Carolina_Avenue {
+            type = Basic ncave {
+                attributes = rent:"75", cost:"300"
+            };
+            position = 33
+            color = green
+            text = "North Carolina Avenue"
+        },
+        Tile Community_Chest{
+            type = Basic cc3 {
+                actions = 
+                    Action draw_card {
+                        description = "Draw a Community Chest Card"
+                    }
+            };
+            position = 34
+            color = white
+            text = "Community Chest"    
+        },
+        Tile Pennsylvania_Avenue {
+            type = Basic pennave {
+                attributes = rent:"80", cost:"320"
+            };
+            position = 35
+            color = green
+            text = "Pennsylvania Avenue"
+        },
+        Tile Short_Line {
+            type = Basic sl {
+                attributes = rent:"50", cost:"200"
+            };
+            position = 36
+            color = white
+            text = "Short Line"    
+        },
+        Tile Park_Place {
+            type = Basic parkpl {
+                attributes = rent:"88", cost:"350"
+            };
+            position = 37
+            color = dark blue
+            text = "Park Place"
+        },
+        Tile Luxury_Tax{
+            type = Basic lt {
+                actions = 
+                    Action pay_tax {
+                        description = "Pay $100 Luxury Tax"
+                    }
+            };
+            position = 38
+            color = white
+            text = "Luxury Tax"    
+        },
+        Tile Board_Walk {
+            type = Basic bw {
+                attributes = rent:"100", cost:"400"
+            };
+            position = 39
+            color = dark blue
+            text = "Boardwalk"
+        }
+
+
+    players = 
+        Player Martha {
+            color = red
+            position = 0
+            score = 1500
+        },
+        Player Duncan {
+            color = light blue
+            position = 0
+            score = 1500
+        },
+        Player Jeff {
+            color = yellow
+            position = 0
+            score = 1500
+        },
+        Player Noah {
+            color = purple
+            position = 0
+            score = 1500
+        }
+
+    die = 
+        Die six_side {
+            sides = 6
+            sideValues = 1, 2, 3, 4, 5, 6
+            amount = 2
+        }
+
+    cards1 =
+        Card community_chest1 {
+            type = 
+                SpecialCard advance_go {
+                    effect = "Advance to Go. Collect $200."
+                    description = "Player moves to Go and collects $200."
+            }
+        },
+        Card community_chest2 {
+            type = 
+                SpecialCard bank_error {
+                    effect = "Bank error in your favor. Collect $200."
+                    description = "Player receives $200 from the bank."
+            }
+        },
+        Card community_chest3 {
+            type = 
+                SpecialCard doctors_fees {
+                    effect = "Doctor's fees. Pay $50."
+                    description = "Player pays $50 in medical expenses."
+            }
+        },
+        Card community_chest4 {
+            type = 
+                SpecialCard stock_sale {
+                    effect = "From sale of stock you get $50."
+                    description = "Player gains $50 from selling stock."
+            }
+        },
+        Card community_chest5 {
+            type = 
+                SpecialCard get_out_of_jail {
+                    effect = "Get Out of Jail Free. This card may be kept until needed or sold/traded."
+                    description = "Player can escape jail or trade the card."
+            }
+        },
+        Card community_chest6 {
+            type = 
+                SpecialCard go_to_jail {
+                    effect = "Go to Jail. Go directly to Jail. Do not pass Go. Do not collect $200."
+                    description = "Player is sent directly to Jail without collecting money."
+            }
+        },
+        Card community_chest7 {
+            type = 
+                SpecialCard opera_night {
+                    effect = "Grand Opera Night. Collect $50 from every player for opening night seats."
+                    description = "Player collects $50 from each player."
+            }
+        },
+        Card community_chest8 {
+            type = 
+                SpecialCard holiday_fund {
+                    effect = "Holiday Fund matures. Receive $100."
+                    description = "Player receives $100 from a matured holiday fund."
+            }
+        },
+        Card community_chest9 {
+            type = 
+                SpecialCard tax_refund {
+                    effect = "Income tax refund. Collect $20."
+                    description = "Player receives $20 as tax refund."
+            }
+        },
+        Card community_chest10 {
+            type = 
+                SpecialCard birthday {
+                    effect = "It is your birthday. Collect $10 from every player."
+                    description = "Each player pays $10 to the birthday player."
+            }
+        },
+        Card community_chest11 {
+            type = 
+                SpecialCard life_insurance {
+                    effect = "Life insurance matures. Collect $100."
+                    description = "Player receives $100 from life insurance."
+            }
+        },
+        Card community_chest12 {
+            type = 
+                SpecialCard hospital_fees {
+                    effect = "Hospital Fees. Pay $50."
+                    description = "Player pays $50 in hospital fees."
+            }
+        },
+        Card community_chest13 {
+            type = 
+                SpecialCard school_fees {
+                    effect = "School fees. Pay $50."
+                    description = "Player pays $50 in school expenses."
+            }
+        },
+        Card community_chest14 {
+            type = 
+                SpecialCard consultancy_fee {
+                    effect = "Receive $25 consultancy fee."
+                    description = "Player receives $25 for consultancy services."
+            }
+        },
+        Card community_chest15 {
+            type = 
+                SpecialCard street_repairs {
+                    effect = "You are assessed for street repairs: Pay $40 per house and $115 per hotel you own."
+                    description = "Player pays repair costs for owned houses and hotels."
+            }
+        },
+        Card community_chest16 {
+            type = 
+                SpecialCard beauty_contest {
+                    effect = "You have won second prize in a beauty contest. Collect $10."
+                    description = "Player receives $10 prize."
+            }
+        },
+        Card community_chest17 {
+            type = 
+                SpecialCard inheritance {
+                    effect = "You inherit $100."
+                    description = "Player receives $100 inheritance."
+            }
+        }
+
+    cards2 =  
+        Card chance1 {
+            type = 
+                SpecialCard bank_error {
+                    effect = "Bank error in your favor. Collect $200."
+                    description = "Gives 200 dollars to the player that receives this card"
+            }
+        },
+        Card chance2 {
+            type = 
+            SpecialCard advance_go {
+                effect = "Advance to Go. Collect $200."
+                description = "Player moves token to Go and collects $200."
+            }
+        },
+        Card chance3 {
+            type = 
+            SpecialCard advance_illinois {
+                effect = "Advance to Illinois Ave. If you pass Go, collect $200."
+                description = "Moves player to Illinois Ave; collect $200 if Go is passed."
+            }
+        },
+        Card chance4 {
+            type = 
+            SpecialCard advance_st_charles {
+                effect = "Advance to St. Charles Place. If you pass Go, collect $200."
+                description = "Moves player to St. Charles Place; collect $200 if Go is passed."
+            }
+        },
+        Card chance5 {
+        type = 
+            SpecialCard nearest_utility {
+                effect = "Advance to the nearest Utility. If unowned, you may buy it from the Bank. If owned, throw dice and pay owner 10 times the amount thrown."
+                description = "Player moves to closest Utility; either buys or pays owner 10× dice roll."
+            }
+        },
+        Card chance6 {
+        type = 
+            SpecialCard nearest_railroad {
+                effect = "Advance to the nearest Railroad. If unowned, you may buy it from the Bank. If owned, pay owner twice the rent."
+                description = "Player moves to nearest Railroad; pays double rent if owned, or may buy if unowned."
+            }
+        },
+        Card chance7 {
+        type = 
+            SpecialCard bank_dividend {
+                effect = "Bank pays you dividend of $50."
+                description = "Player receives $50 from the Bank."
+            }
+        },
+        Card chance8 {
+        type = 
+            SpecialCard get_out_of_jail {
+                effect = "Get out of Jail Free. This card may be kept until needed or sold/traded."
+                description = "Allows player to escape jail without paying or use later."
+            }
+        },
+        Card chance9 {
+        type = 
+            SpecialCard go_back_3 {
+                effect = "Go Back Three Spaces."
+                description = "Player moves token backward 3 spaces."
+            }
+        },
+        Card chance10 {
+        type = 
+            SpecialCard go_to_jail {
+                effect = "Go to Jail. Go directly to Jail. Do not pass GO, do not collect $200."
+                description = "Player is sent directly to Jail."
+            }
+        },
+        Card chance11 {
+        type = 
+            SpecialCard general_repairs {
+                effect = "Make general repairs on all your property: For each house pay $25, for each hotel pay $100."
+                description = "Player pays repair fees: $25 per house, $100 per hotel."
+            }
+        },
+        Card chance12 {
+        type = 
+            SpecialCard trip_reading_rr {
+                effect = "Take a trip to Reading Railroad. If you pass Go, collect $200."
+                description = "Player moves token to Reading Railroad and collects $200 if passing Go."
+            }
+        },
+        Card chance13 {
+        type = 
+            SpecialCard pay_poor_tax {
+                effect = "Pay Poor Tax of $15."
+                description = "Player pays $15 tax."
+            }
+        },
+        Card chance14 {
+        type = 
+            SpecialCard advance_boardwalk {
+                effect = "Take a walk on the Boardwalk. Advance token to Boardwalk."
+                description = "Player advances token directly to Boardwalk."
+            }
+        },
+        Card chance15 {
+        type = 
+            SpecialCard elected_chairman {
+                effect = "You have been elected Chairman of the Board. Pay each player $50."
+                description = "Player pays $50 to every other player."
+            }
+        },
+        Card chance16 {
+        type = 
+            SpecialCard loan_matures {
+                effect = "Your building and loan matures. Receive $150."
+                description = "Player receives $150 from matured loan."
+            }
+        }   
+}
+
+    
+        

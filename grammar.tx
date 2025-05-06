@@ -1,0 +1,103 @@
+Board:
+    'Board' name=ID '{'
+        'length' '=' size=INT
+        ('tiles' '=' tiles+=Tile (',' tiles+=Tile)*)?
+        ('players' '=' players+=Player (',' players+=Player)*)?
+        ('die' '=' die+=Die (',' die+=Die)*)? 
+        ('cards1' '=' cards+=Card (',' cards+=Card)*)?
+        ('cards2' '=' cards+=Card (',' cards+=Card)*)?
+        ('cards3' '=' cards+=Card (',' cards+=Card)*)?
+        ('cards4' '=' cards+=Card (',' cards+=Card)*)?
+    '}';
+
+Tile:
+    'Tile' name=ID '{'
+        'type' '=' type=TileType ';'
+        ('position' '=' position=INT)?
+        ('color' '=' color=Color)?
+        ('text' '=' text=STRING)?
+    '}';
+
+TileType:
+    BasicType | StartType | EndType;
+
+BasicType:
+    'Basic' name=ID '{'
+        ('attributes' '=' attributes+=Attribute (',' attributes+=Attribute)*)?
+        ('actions' '=' actions+=Action (',' actions+=Action)*)?
+    '}';
+
+StartType:
+    'Start' name=ID ('{' '}')?;
+
+EndType:
+    'End' name=ID ('{' '}')?;
+
+Attribute:
+    name=ID ':' value=STRING;
+
+Action:
+    'Action' name=ID '{'
+        ('description' '=' description=STRING)?
+        ('effect' '=' effect=STRING)?
+    '}';
+
+Player:
+    'Player' name=ID '{'
+        'color' '=' color=Color
+        ('position' '=' position=INT?
+        ('score' '=' score=INT)?
+        ('inventory' '=' inventory+=Item (',' inventory+=Item)*)?)
+    '}';
+
+Die:
+    'Die' name=ID '{'
+        'sides' '=' sides=INT
+        'sideValues' '=' sideValues+=SideValue (',' sideValues+=SideValue)*
+        'amount' '=' amount=INT
+    '}';
+
+SideValue:
+    INT | STRING | Color;
+
+Item:
+    'Item' name=ID '{'
+        'type' '=' type=ID
+        ('properties' '=' properties+=Property (',' properties+=Property)*)?
+    '}';
+
+ItemType:
+    Property | Card;
+
+Property:
+    'Property' name=ID '{'
+        'value' '=' value=INT
+        'owned' '=' owned=BOOL
+        ('description' '=' description=STRING)?
+    '}';
+
+Card:
+    'Card' name=ID '{'
+        'type' '=' type=CardType
+    '}';
+
+CardType:
+    BasicCard | SpecialCard;
+
+BasicCard:
+    'BasicCard' name=ID '{'
+        'description' '=' description=STRING
+    '}';    
+
+SpecialCard:
+    'SpecialCard' name=ID '{'
+        'effect' '=' effect=STRING
+        'description' '=' description=STRING
+    '}';
+
+Color:
+    'red' | 'light blue'| 'dark blue' | 'green' | 'yellow' | 'purple' 
+    | 'orange' | 'black' | 'white' | 'brown';
+
+Bool:
+    'true' | 'false';
