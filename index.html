@@ -45,6 +45,46 @@
     <h1>BoardLang</h1>
     <p><em>by Duncan Hugelmaier</em></p>
     <p>A programming language for making custom Monopoly boards!</p>
+    <p>Here's a sample of the grammar:</p>
+    <p>
+    <br>Board:
+    <br>'Board' name=ID '{'
+        <br>'length' '=' size=INT
+        <br>('tiles' '=' tiles+=Tile (',' tiles+=Tile)*)?
+        <br>('players' '=' players+=Player (',' players+=Player)*)?
+        <br>('die' '=' die+=Die (',' die+=Die)*)? 
+        <br>('cards1' '=' cards+=Card (',' cards+=Card)*)?
+        <br>('cards2' '=' cards+=Card (',' cards+=Card)*)?
+        <br>('cards3' '=' cards+=Card (',' cards+=Card)*)?
+        <br>('cards4' '=' cards+=Card (',' cards+=Card)*)?
+    <br>'}';
+
+<br>Tile:
+    <br>'Tile' name=ID '{'
+        <br>'type' '=' type=TileType ';'
+        <br>('position' '=' position=INT)?
+        <br>('color' '=' color=Color)?
+        <br>('text' '=' text=STRING)?
+    <br>'}';
+
+<br>TileType:
+    <br>BasicType | StartType | EndType;
+
+<br>BasicType:
+    <br>'Basic' name=ID '{'
+        <br>('attributes' '=' attributes+=Attribute (',' attributes+=Attribute)*)?
+        <br>('actions' '=' actions+=Action (',' actions+=Action)*)?
+    <br>'}';
+
+<br>StartType:
+    <br>'Start' name=ID ('{' '}')?;
+
+<br>EndType:
+    <br>'End' name=ID ('{' '}')?;
+
+<br>Attribute:
+    <br>name=ID ':' value=STRING | name=ID ':' bool=Bool;</p>
+    
     <p>Here's a sample output of a game being simulated using BoardLang</p>
     <p>Martha's turn
        <br> Martha has $1500
