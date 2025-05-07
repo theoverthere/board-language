@@ -34,7 +34,8 @@ EndType:
     'End' name=ID ('{' '}')?;
 
 Attribute:
-    name=ID ':' value=STRING;
+    name=ID ':' value=STRING | name=ID ':' bool=Bool;
+    
 
 Action:
     'Action' name=ID '{'
@@ -64,7 +65,8 @@ Item:
     'Item' name=ID '{'
         'type' '=' type=ID
         ('properties' '=' properties+=Property (',' properties+=Property)*)?
-    '}';
+    '}' 
+    | "null";
 
 ItemType:
     Property | Card;
@@ -100,4 +102,4 @@ Color:
     | 'orange' | 'black' | 'white' | 'brown';
 
 Bool:
-    'true' | 'false';
+    'True' | 'False';
