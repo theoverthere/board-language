@@ -8,9 +8,9 @@ Board Monopoly {
             color = white
             text = "Go"
         },
-        Tile Mediterranean_Ave{
+        Tile Mediterranean_Ave {
             type = Basic medave {
-                attributes = rent:"15", cost:"60"
+                attributes = rent:"15", cost:"60", owned:False
             };
             position = 2
             color = brown
@@ -29,7 +29,7 @@ Board Monopoly {
         },
         Tile Baltic_Ave{
             type = Basic balave {
-                attributes = rent:"15", cost:"60"
+                attributes = rent:"15", cost:"60", owned:False
             };
             position = 4
             color = brown
@@ -48,7 +48,7 @@ Board Monopoly {
         },
         Tile Reading_Railroad{
             type = Basic rr {
-                attributes = rent:"50", cost:"200"
+                attributes = rent:"50", cost:"200", owned:False
             };
             position = 6
             color = white
@@ -56,7 +56,7 @@ Board Monopoly {
         },
         Tile Oriental_Ave{
             type = Basic orave {
-                attributes = rent:"25", cost:"100"
+                attributes = rent:"25", cost:"100", owned:False
             };
             position = 7
             color = light blue
@@ -75,7 +75,7 @@ Board Monopoly {
         },
         Tile Vermont_Ave{
             type = Basic verave {
-                attributes = rent:"25", cost:"100"
+                attributes = rent:"25", cost:"100", owned:False
             };
             position = 9
             color = light blue
@@ -83,7 +83,7 @@ Board Monopoly {
         },
         Tile Connecticut_Ave{
             type = Basic connave {
-                attributes = rent:"30", cost:"120"
+                attributes = rent:"30", cost:"120", owned:False
             };
             position = 10
             color = light blue
@@ -97,7 +97,7 @@ Board Monopoly {
         },
         Tile St_Charles_Place{
             type = Basic stchapl {
-                attributes = rent:"35", cost:"140"
+                attributes = rent:"35", cost:"140", owned:False
             };
             position = 12
             color = purple
@@ -105,7 +105,7 @@ Board Monopoly {
         },
         Tile Electric_Company{
             type = Basic elcom {
-                attributes = rent:"38", cost:"150"
+                attributes = rent:"38", cost:"150", owned:False
             };
             position = 13
             color = white
@@ -113,7 +113,7 @@ Board Monopoly {
         },
         Tile States_Avenue{
             type = Basic stave {
-                attributes = rent:"35", cost:"140"
+                attributes = rent:"35", cost:"140", owned:False
             };
             position = 14
             color = purple
@@ -121,7 +121,7 @@ Board Monopoly {
         },
         Tile Virginia_Avenue{
             type = Basic viave {
-                attributes = rent:"40", cost:"160"
+                attributes = rent:"40", cost:"160", owned:False
             };
             position = 15
             color = purple
@@ -129,7 +129,7 @@ Board Monopoly {
         },
         Tile Pennsylvania_Railroad{
             type = Basic pr {
-                attributes = rent:"50", cost:"200"
+                attributes = rent:"50", cost:"200", owned:False
             };
             position = 16
             color = white
@@ -137,7 +137,7 @@ Board Monopoly {
         },
         Tile St_James_Place{
             type = Basic stjpl {
-                attributes = rent:"45", cost:"180"
+                attributes = rent:"45", cost:"180", owned:False
             };
             position = 17
             color = orange
@@ -156,7 +156,7 @@ Board Monopoly {
         },
         Tile Tennessee_Ave {
             type = Basic tenave {
-                attributes = rent:"45", cost:"180"
+                attributes = rent:"45", cost:"180", owned:False
             };
             position = 19
             color = orange
@@ -164,7 +164,7 @@ Board Monopoly {
         },
         Tile New_York_Ave {
             type = Basic nyave {
-                attributes = rent:"50", cost:"200"
+                attributes = rent:"50", cost:"200", owned:False
             };
             position = 20
             color = orange
@@ -183,7 +183,7 @@ Board Monopoly {
         },
         Tile Kentucky_Ave {
             type = Basic kyave {
-                attributes = rent:"55", cost:"220"
+                attributes = rent:"55", cost:"220", owned:False
             };
             position = 22
             color = red
@@ -202,7 +202,7 @@ Board Monopoly {
         },
         Tile Indiana_Ave {
             type = Basic kyave {
-                attributes = rent:"55", cost:"220"
+                attributes = rent:"55", cost:"220", owned:False
             };
             position = 24
             color = red
@@ -210,7 +210,7 @@ Board Monopoly {
         },
         Tile Illinois_Ave {
             type = Basic illave {
-                attributes = rent:"60", cost:"240"
+                attributes = rent:"60", cost:"240", owned:False
             };
             position = 25
             color = red
@@ -218,7 +218,7 @@ Board Monopoly {
         },
         Tile B_and_O_Railroad {
             type = Basic br {
-                attributes = rent:"50", cost:"200"
+                attributes = rent:"50", cost:"200", owned:False
             };
             position = 26
             color = white
@@ -226,7 +226,7 @@ Board Monopoly {
         },
         Tile Atlantic_Ave {
             type = Basic atlave {
-                attributes = rent:"65", cost:"260"
+                attributes = rent:"65", cost:"260", owned:False
             };
             position = 27
             color = yellow
@@ -234,7 +234,7 @@ Board Monopoly {
         },
         Tile Ventnor_Ave {
             type = Basic venave {
-                attributes = rent:"65", cost:"260"
+                attributes = rent:"65", cost:"260", owned:False
             };
             position = 28
             color = yellow
@@ -242,7 +242,7 @@ Board Monopoly {
         },
         Tile Water_Works {
             type = Basic watwor {
-                attributes = rent:"38", cost:"150"
+                attributes = rent:"38", cost:"150", owned:False
             };
             position = 29
             color = white
@@ -250,7 +250,7 @@ Board Monopoly {
         },
         Tile Marvin_Gardens {
             type = Basic margar {
-                attributes = rent:"70", cost:"280"
+                attributes = rent:"70", cost:"280", owned:False
             };
             position = 30
             color = yellow
@@ -269,7 +269,7 @@ Board Monopoly {
         },
         Tile Pacific_Avenue {
             type = Basic pacave {
-                attributes = rent:"75", cost:"300"
+                attributes = rent:"75", cost:"300", owned:False
             };
             position = 32
             color = green
@@ -277,7 +277,7 @@ Board Monopoly {
         },
         Tile North_Carolina_Avenue {
             type = Basic ncave {
-                attributes = rent:"75", cost:"300"
+                attributes = rent:"75", cost:"300", owned:False
             };
             position = 33
             color = green
@@ -296,7 +296,7 @@ Board Monopoly {
         },
         Tile Pennsylvania_Avenue {
             type = Basic pennave {
-                attributes = rent:"80", cost:"320"
+                attributes = rent:"80", cost:"320", owned:False
             };
             position = 35
             color = green
@@ -304,7 +304,7 @@ Board Monopoly {
         },
         Tile Short_Line {
             type = Basic sl {
-                attributes = rent:"50", cost:"200"
+                attributes = rent:"50", cost:"200", owned:False
             };
             position = 36
             color = white
@@ -312,7 +312,7 @@ Board Monopoly {
         },
         Tile Park_Place {
             type = Basic parkpl {
-                attributes = rent:"88", cost:"350"
+                attributes = rent:"88", cost:"350", owned:False
             };
             position = 37
             color = dark blue
@@ -331,7 +331,7 @@ Board Monopoly {
         },
         Tile Board_Walk {
             type = Basic bw {
-                attributes = rent:"100", cost:"400"
+                attributes = rent:"100", cost:"400", owned:False
             };
             position = 39
             color = dark blue
@@ -344,21 +344,25 @@ Board Monopoly {
             color = red
             position = 0
             score = 1500
+            inventory = null
         },
         Player Duncan {
             color = light blue
             position = 0
             score = 1500
+            inventory = null
         },
         Player Jeff {
             color = yellow
             position = 0
             score = 1500
+            inventory = null
         },
         Player Noah {
             color = purple
             position = 0
             score = 1500
+            inventory = null
         }
 
     die = 
@@ -602,6 +606,7 @@ Board Monopoly {
                 description = "Player receives $150 from matured loan."
             }
         }   
+} 
 }
 
     
