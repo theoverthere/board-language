@@ -1,0 +1,43 @@
+Board Simple {
+    length = 2
+
+    tiles = 
+        Tile Go {
+            type = Start Go;
+            position = 1
+            color = white
+            text = "Go"
+        },
+        Tile the_only_place_in_town {
+            type = Basic topit {
+                attributes = rent:"15", cost:"60", owned:False
+            };
+            position = 2
+            color = brown
+            text = "The Only Place in Town"
+        }
+
+    players = 
+        Player player1 {
+            color = yellow
+            position = 0
+            score = 100
+            inventory = null
+        }
+
+    die = 
+        Die two_side {
+            sides = 2
+            sideValues = 1, 2
+            amount = 1
+        }
+    
+    cards1 =
+        Card community_chest1 {
+            type = 
+                SpecialCard advance_go {
+                    effect = "Advance to Go. Collect $200."
+                    description = "Player moves to Go and collects $200."
+            }
+        }
+}
