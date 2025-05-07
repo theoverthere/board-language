@@ -1,0 +1,112 @@
+Board Simple {
+    length = 7
+
+    tiles = 
+        Tile Go {
+            type = Start Go;
+            position = 1
+            color = white
+            text = "Go"
+        },
+        Tile nuggets {
+            type = Basic nugs {
+                attributes = rent:"50", cost:"400", owned:False
+            };
+            position = 2
+            color = orange
+            text = "The Denver Nuggets"
+        },
+        Tile Community_Chest{
+            type = Basic cc1 {
+                actions = 
+                    Action draw_card {
+                        description = "Draw a Community Chest Card"
+                    }
+            };
+            position = 3
+            color = white
+            text = "Community Chest"    
+        },
+        Tile clippers {
+            type = Basic topit {
+                attributes = rent:"50", cost:"400", owned:False
+            };
+            position = 4
+            color = black
+            text = "The LA Clippers"
+        },
+        Tile Community_Chest{
+            type = Basic cc1 {
+                actions = 
+                    Action draw_card {
+                        description = "Draw a Community Chest Card"
+                    }
+            };
+            position = 5
+            color = white
+            text = "Community Chest"    
+        },
+        Tile warriors {
+            type = Basic topit {
+                attributes = rent:"50", cost:"400", owned:False
+            };
+            position = 6
+            color = black
+            text = "The Warriors"
+        },
+        Tile Community_Chest{
+            type = Basic cc1 {
+                actions = 
+                    Action draw_card {
+                        description = "Draw a Community Chest Card"
+                    }
+            };
+            position = 7
+            color = white
+            text = "Community Chest"    
+        }
+
+    players = 
+        Player lebron {
+            color = yellow
+            position = 0
+            score = 100000
+            inventory = null
+        },
+        Player curry {
+            color = red
+            position = 0
+            score = 10000
+            inventory = null
+        }
+
+    die = 
+        Die three_side {
+            sides = 3
+            sideValues = 1, 2, 3
+            amount = 3
+        }
+    
+    cards1 =
+        Card community_chest1 {
+            type = 
+                SpecialCard advance_go {
+                    effect = "Advance to Go. Collect $200."
+                    description = "Player moves to Go and collects $200."
+            }
+        },
+        Card community_chest2 {
+            type = 
+                SpecialCard bank_error {
+                    effect = "Bank error in your favor. Collect $200."
+                    description = "Player receives $200 from the bank."
+            }
+        },
+        Card community_chest3 {
+            type = 
+                SpecialCard doctors_fees {
+                    effect = "Doctor's fees. Pay $50."
+                    description = "Player pays $50 in medical expenses."
+            }
+        }
+}
